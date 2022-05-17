@@ -29,7 +29,9 @@ function checksLocalStorage() {
 
 function resetFormSubmit(evt) {
   evt.preventDefault();
-
+  if (formEl.elements.email.value === '' || formEl.elements.message.value === '') {
+    return alert('Всі поля мають бути заповнені!');
+  }
   console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
 
   formEl.reset();
