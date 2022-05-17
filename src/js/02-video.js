@@ -20,6 +20,6 @@ player.on('timeupdate', throttle(onPlay, 1000));
 
 const timePlay = localStorage.getItem('videoplayer-current-time');
 console.log(timePlay);
-if (timePlay !== '') {
+if (timePlay) {
   player.setCurrentTime(timePlay);
 }
